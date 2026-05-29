@@ -6,11 +6,14 @@ const WHATSAPP_NUMBER = "5511919730067";
 const COUNTDOWN_TARGET = "2026-10-31T23:59:59-03:00";
 
 const ROMANTIC_CAPTIONS = [
-  "Meu lugar favorito.",
-  "A saudade mora aqui.",
-  "A gente ainda vai viver tudo.",
-  "Você é meu lar.",
-  "Eu escolheria você de novo."
+  "a gente",
+  "eu gosto muito dessa",
+  "saudade desse dia",
+  "essa mora em mim",
+  "uma das minhas favoritas",
+  "a gente ainda vai viver muita coisa",
+  "eu lembro disso",
+  "essa é nossa"
 ];
 
 const galleryGrid = document.querySelector("#galleryGrid");
@@ -45,7 +48,7 @@ function startCountdown() {
       hoursEl.textContent = "0";
       minutesEl.textContent = "0";
       secondsEl.textContent = "0";
-      messageEl.textContent = "Chegou o nosso tempo ❤️";
+      messageEl.textContent = "Chegou o nosso tempo";
       return;
     }
 
@@ -148,13 +151,13 @@ function sendWhatsAppAnswer() {
   const answer = answerText.value.trim();
 
   if (!answer) {
-    formWarning.textContent = "Escreve um pouquinho antes, meu amor ❤️";
+    formWarning.textContent = "escreve alguma coisa antes de mandar";
     answerText.focus();
     return;
   }
 
   formWarning.textContent = "";
-  const message = `Oi, meu amor ❤️\n\nEu li seu site e essa é minha resposta:\n\n${answer}\n\n❤️`;
+  const message = `Oi, eu li o site.\n\nMinha resposta é:\n\n${answer}`;
   const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
   window.open(url, "_blank", "noopener,noreferrer");
 }
@@ -183,7 +186,7 @@ openSecret.addEventListener("click", openConfirmModal);
 confirmYes.addEventListener("click", showSpecialQuestion);
 confirmNo.addEventListener("click", () => {
   closeConfirmModal();
-  softMessage.textContent = "Tudo bem, meu amor… eu espero o seu tempo ❤️";
+  softMessage.textContent = "tudo bem, eu espero";
 });
 sendAnswer.addEventListener("click", sendWhatsAppAnswer);
 lightboxClose.addEventListener("click", closeLightbox);
