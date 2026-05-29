@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Pra minha garota ❤️ — uma carta digital cheia de saudade, amor e esperança." />
-  <title>Pra minha garota ❤️</title>
+  <meta name="description" content="Um site simples pra dizer que a saudade apertou." />
+  <title>Pra minha garota</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
@@ -17,29 +17,25 @@
     <span class="glow glow-three"></span>
   </div>
 
-  <div class="floating-hearts" aria-hidden="true">
-    <span>❤️</span><span>♡</span><span>♥</span><span>❤️</span><span>♡</span>
-  </div>
-
   <main>
     <section class="hero section" id="inicio">
       <div class="hero-card reveal">
-        <p class="eyebrow">uma carta digital só nossa</p>
-        <h1>Pra minha garota ❤️</h1>
+        <p class="eyebrow">só pra você</p>
+        <h1>Pra minha garota</h1>
         <p class="hero-subtitle">Eu fiz isso porque a saudade apertou demais.</p>
-        <p class="hero-line">Um pedacinho do meu coração em forma de site.</p>
+        <p class="hero-line">Não queria deixar tudo isso guardado só em mim.</p>
         <div class="hero-actions" aria-label="Atalhos do site">
-          <a class="btn btn-primary" href="#galeria">Ver nossas fotos</a>
-          <a class="btn btn-secondary" href="#carta">Ler meu coração</a>
-          <a class="btn btn-ghost" href="#pergunta-secreta">Pergunta secreta</a>
+          <a class="btn btn-primary" href="#galeria">ver nossas fotos</a>
+          <a class="btn btn-secondary" href="#carta">ler o que eu escrevi</a>
+          <a class="btn btn-ghost" href="#pergunta-secreta">tem uma coisa aqui</a>
         </div>
       </div>
     </section>
 
     <section class="section countdown-section" id="contagem">
       <div class="glass-card reveal">
-        <p class="eyebrow">contagem regressiva</p>
-        <h2>Falta pouco pra gente estar mais perto do nosso sonho…</h2>
+        <p class="eyebrow">contagem</p>
+        <h2>Falta pouco pra gente ficar mais perto do que a gente quer.</h2>
         <!-- Data configurável no script.js: 2026-10-31T23:59:59-03:00 -->
         <div class="countdown" id="countdown" aria-live="polite">
           <div><strong id="days">0</strong><span>dias</span></div>
@@ -47,19 +43,26 @@
           <div><strong id="minutes">0</strong><span>min</span></div>
           <div><strong id="seconds">0</strong><span>seg</span></div>
         </div>
-        <p class="countdown-message" id="countdownMessage">Cada segundo é um passo na direção da gente.</p>
+        <p class="countdown-message" id="countdownMessage">Um dia de cada vez.</p>
       </div>
     </section>
 
     <section class="section letter-section" id="carta">
       <article class="letter-card reveal">
-        <p class="eyebrow">nosso texto</p>
-        <h2>Ler meu coração</h2>
-        <!-- Para alterar este texto principal, edite o parágrafo abaixo. -->
-        <p class="love-letter">"Meu amor, isso pode até parecer brega, mas eu tô morrendo de saudades de você. Desde que a gente se separou, eu sinto muito a sua falta, e eu simplesmente não sei dizer como a saudade dói no meu peito. Os dias sem você estão difíceis, mas logo logo tudo vai se resolver, eu prometo. Jajá iremos morar juntos, viver juntos e ter o nosso casamento. Eu sei que você é incrível em absolutamente tudo, e isso me faz se apaixonar por você cada dia mais. Você é meu sol, minha Lua, minha vida, meu denguinho, minha princesinha, você é tudo pra mim. Eu te amo, minha garota. E isso me define como e pq eu te amo tanto ❤️. Não desista de mim, sou falho, as vezes triste, mas o meu amor por você ultrapassa qualquer amor do mundo. Eu te amo ❤️"</p>
+        <p class="eyebrow">pra você</p>
+        <h2>Só lê com calma</h2>
+        <div class="love-letter">
+          <p>Meu amor, isso pode até parecer meio brega, mas eu tô morrendo de saudades de você.</p>
+          <p>Desde que a gente se separou, eu sinto muito a sua falta. Eu não sei explicar direito como essa saudade pesa no meu peito. Os dias sem você têm sido difíceis, mas eu acredito que logo tudo vai se resolver.</p>
+          <p>Jajá a gente vai morar junto, viver junto e construir o que a gente tanto fala. Nosso casamento, nossa casa, nossa vida.</p>
+          <p>Eu sei que você é incrível em muita coisa, e isso só me faz me apaixonar mais por você. Você é meu sol, minha Lua, minha vida, meu denguinho, minha princesinha. Você é muita coisa pra mim.</p>
+          <p>Eu te amo, minha garota. De verdade.</p>
+          <p>Não desiste de mim. Eu sei que eu sou falho, que às vezes eu fico triste, que nem sempre eu acerto do jeito que eu queria. Mas o amor que eu sinto por você é maior que qualquer coisa.</p>
+          <p>Eu te amo.</p>
+        </div>
 
         <div class="secret-invite" id="pergunta-secreta">
-          <button class="secret-button" id="openSecret" type="button">Posso te fazer uma pergunta?</button>
+          <button class="secret-button" id="openSecret" type="button">posso te perguntar uma coisa?</button>
           <p class="soft-message" id="softMessage" role="status"></p>
         </div>
       </article>
@@ -67,34 +70,41 @@
 
     <section class="section gallery-section" id="galeria">
       <div class="section-heading reveal">
-        <p class="eyebrow">nossas lembranças</p>
-        <h2>Fotos que guardam meu coração</h2>
-        <p>Adicione suas fotos em <strong>assets/fotos/</strong> e cadastre os caminhos no <strong>photos.js</strong>.</p>
+        <p class="eyebrow">nós dois</p>
+        <h2>Algumas memórias nossas</h2>
+        <p>Coloque as fotos na pasta <strong>assets/fotos/</strong> e cadastre os caminhos no <strong>photos.js</strong>.</p>
       </div>
       <div class="gallery-grid" id="galleryGrid" aria-live="polite"></div>
-      <p class="empty-gallery" id="emptyGallery" hidden>Coloque nossas fotos na pasta assets/fotos e cadastre no photos.js ❤️</p>
+      <p class="empty-gallery" id="emptyGallery" hidden>ainda vou colocar nossas fotos aqui</p>
     </section>
 
     <section class="section special-question hidden" id="specialQuestion" aria-live="polite">
       <div class="glass-card reveal">
-        <p class="eyebrow">pergunta especial</p>
-        <h2>Uma pergunta guardada com carinho</h2>
-        <!-- Para alterar a pergunta especial, edite o parágrafo abaixo. -->
-        <p class="special-text">"Você pensou naquilo que eu disse? Ontem, eu entendi uma coisa, vc não consegue evitar mostrar sua garotinha, exatamente aquela garotinha que eu conheci no começo. Você simplesmente não consegue evitar de deixar ela aparecer quando vc tá mal. E pq eu não tenho ela mais pra mim? Eu sinto tanto a sua falta. Tudo que a gente viveu foi tão incrível, você é e continua sendo uma namorada incrível pra mim, mas você se esconde tanto, se priva tanto de mim, pq disso? Eu sinto tanto a sua falta, e acredito que agora, eu sou o homem perfeito pra ter a minha garotinha de volta."</p>
+        <p class="eyebrow">uma coisa que eu queria falar</p>
+        <h2>Me responde quando puder</h2>
+        <div class="special-text">
+          <p>Você pensou naquilo que eu disse?</p>
+          <p>Ontem eu entendi uma coisa. Quando você tá mal, você não consegue evitar deixar aparecer aquela garotinha que eu conheci no começo.</p>
+          <p>E eu sinto falta dela.</p>
+          <p>Sinto falta de você do jeito mais simples, mais verdadeiro. De tudo que a gente era, de tudo que a gente viveu, de como as coisas ficavam leves quando a gente tava bem.</p>
+          <p>Você continua sendo uma namorada incrível pra mim. Só que às vezes parece que você se esconde, se fecha e se priva de mim. E eu fico me perguntando o porquê.</p>
+          <p>Eu sinto muito a sua falta.</p>
+          <p>E eu queria muito ter de volta essa parte sua que eu conheci, cuidei e amei desde o começo.</p>
+        </div>
 
-        <label class="response-label" for="answerText">Sua resposta</label>
-        <textarea id="answerText" rows="7" placeholder="Escreve aqui sua resposta, meu amor…"></textarea>
+        <label class="response-label" for="answerText">me responde por aqui</label>
+        <textarea id="answerText" rows="7" placeholder="escreve sua resposta aqui..."></textarea>
         <p class="form-warning" id="formWarning" role="alert"></p>
-        <button class="btn btn-primary send-button" id="sendAnswer" type="button">Enviar resposta no WhatsApp ❤️</button>
+        <button class="btn btn-primary send-button" id="sendAnswer" type="button">me mandar a resposta</button>
       </div>
     </section>
   </main>
 
   <div class="modal hidden" id="confirmModal" role="dialog" aria-modal="true" aria-labelledby="confirmTitle">
     <div class="modal-card confirm-card">
-      <p class="eyebrow">com jeitinho</p>
-      <h2 id="confirmTitle">Você tem certeza?</h2>
-      <p>Se você quiser abrir essa parte, eu vou te mostrar uma pergunta que vem do fundo do meu coração.</p>
+      <p class="eyebrow">antes de abrir</p>
+      <h2 id="confirmTitle">tem certeza?</h2>
+      <p>É uma coisa que eu queria te falar com calma.</p>
       <div class="modal-actions">
         <button class="btn btn-primary" id="confirmYes" type="button">Sim</button>
         <button class="btn btn-secondary" id="confirmNo" type="button">Não</button>
