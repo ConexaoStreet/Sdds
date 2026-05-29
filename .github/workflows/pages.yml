@@ -1,0 +1,65 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Deploy static site
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Baixar arquivos do repositório
+        uses: actions/checkout@v4
+
+      - name: Validar estrutura do site
+        run: |
+          test -f index.html || (echo "ERRO: index.html não encontrado na raiz" && exit 1)
+          test -f styles.css || (echo "ERRO: styles.css não encontrado na raiz" && exit 1)
+          test -f script.js || (echo "ERRO: script.js não encontrado na raiz" && exit 1)
+          test -f photos.js || (echo "ERRO: photos.js não encontrado na raiz" && exit 1)
+          test -d assets/fotos || (echo "ERRO: pasta assets/fotos não encontrada" && exit 1)
+
+          if grep -R -i -E "audio|mp3|music|musica|música|play|pause" index.html styles.css script.js photos.js README.md 2>/dev/null; then
+            echo "AVISO: Foram encontradas possíveis referências a música/audio. Verifique antes de publicar."
+          fi
+
+      - name: Preparar pasta de publicação
+        run: |
+          rm -rf dist
+          mkdir -p dist
+          cp index.html dist/
+          cp styles.css dist/
+          cp script.js dist/
+          cp photos.js dist/
+          cp README.md dist/ || true
+          cp -R assets dist/
+          touch dist/.nojekyll
+
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Enviar arquivos do site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+      - name: Publicar no GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
